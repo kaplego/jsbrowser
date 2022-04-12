@@ -375,7 +375,7 @@ export declare interface tabs {
         /**
          * [`extensionTypes.ImageDetails`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails)
          */
-        options?: import("./extensionTabs").ImageDetails
+        options?: import("./extensionTypes").ImageDetails
     ): Promise<string>,
     /**
      * Creates a data URI encoding the image of an area of the currently active tab in the specified window. You must have the `<all_urls>` [permission](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to use this method. (Alternately, Chrome allows use of this method with the `activeTab` [permission](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and a qualifying user gesture).@returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a data URL which encodes the captured image. May be assigned to the 'src' property of an HTML Image element for display. If any error occurs the promise will be rejected with an error message.
@@ -392,7 +392,7 @@ export declare interface tabs {
         /**
          * [`extensionTypes.ImageDetails`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails)
          */
-        options?: import("./extensionTabs").ImageDetails
+        options?: import("./extensionTypes").ImageDetails
     ): Promise<string>,
     /**
      * Call this function to set up a connection between the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) that belong to this extension and are running in the specified tab. This function returns a [`runtime.Port`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) object.
