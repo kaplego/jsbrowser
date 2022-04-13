@@ -1,4 +1,5 @@
 import { alarms } from "./alarms";
+import { bookmarks } from "./bookmarks";
 import { tabs } from "./tabs";
 
 type browser = {
@@ -27,7 +28,8 @@ type browser = {
      * Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a single tab only within a browser session. If the browser is restarted, then it can and will reuse tab `id`s. To associate information with a tab across browser restarts, use [`sessions.setTabValue()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue).
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
      */
-    tabs: tabs
+    tabs: tabs,
+    bookmarks: bookmarks
 };
 
 export default browser;

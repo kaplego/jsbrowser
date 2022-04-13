@@ -375,7 +375,7 @@ export declare interface tabs {
         /**
          * [`extensionTypes.ImageDetails`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails)
          */
-        options?: import("./extensionTabs").ImageDetails
+        options?: import("./extensionTypes").ImageDetails
     ): Promise<string>,
     /**
      * Creates a data URI encoding the image of an area of the currently active tab in the specified window. You must have the `<all_urls>` [permission](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to use this method. (Alternately, Chrome allows use of this method with the `activeTab` [permission](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and a qualifying user gesture).@returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a data URL which encodes the captured image. May be assigned to the 'src' property of an HTML Image element for display. If any error occurs the promise will be rejected with an error message.
@@ -392,7 +392,7 @@ export declare interface tabs {
         /**
          * [`extensionTypes.ImageDetails`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails)
          */
-        options?: import("./extensionTabs").ImageDetails
+        options?: import("./extensionTypes").ImageDetails
     ): Promise<string>,
     /**
      * Call this function to set up a connection between the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) that belong to this extension and are running in the specified tab. This function returns a [`runtime.Port`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) object.
@@ -727,7 +727,7 @@ export declare interface tabs {
     ): Promise<number>,
     /**
      * Gets the current zoom settings for a specified tab.
-     * @returns A Promise that will be fulfilled with a [`tabs.ZoomSettings`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettings) object representing the tab's current zoom settings. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a [`tabs.ZoomSettings`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettings) object representing the tab's current zoom settings. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/getZoomSettings)
      */
     getZoomSettings(
@@ -740,7 +740,7 @@ export declare interface tabs {
     ): Promise<ZoomSettings>,
     /**
      * Navigate to the next page in tab's history, if available.
-     * @returns A Promise that is fulfilled when the page navigation finishes.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled when the page navigation finishes.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/goForward)
      */
     goForward(
@@ -757,7 +757,7 @@ export declare interface tabs {
     ): Promise<void>,
     /**
      * Navigate to the previous page in tab's history, if available.
-     * @returns A Promise that is fulfilled when the page navigation finishes.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled when the page navigation finishes.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/goBack)
      */
     goBack(
@@ -787,7 +787,7 @@ export declare interface tabs {
      * The first time an extension hides a tab, the browser will tell the user that the tab is being hidden, show them how they can access the hidden tab, and give them the option of disabling the extension instead.
      * 
      * To use this API you must have the "tabHide" [permission](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
-     * @returns A Promise that will be fulfilled with an array containing the IDs of the tabs that were hidden. If any error occurs, the promise will be rejected with an error message.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an array containing the IDs of the tabs that were hidden. If any error occurs, the promise will be rejected with an error message.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/hide)
      * @experimental
      */
@@ -805,7 +805,7 @@ export declare interface tabs {
     ): Promise<string[]>
     /**
      * Highlights (selects) one or more tabs. Tabs are specified using a window ID and a range of tab indices.
-     * @returns A Promise that will be fulfilled with a [`windows.Window`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) object containing details about the window whose tabs were highlighted. If the window could not be found or some other error occurs, the promise will be rejected with an error message.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a [`windows.Window`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) object containing details about the window whose tabs were highlighted. If the window could not be found or some other error occurs, the promise will be rejected with an error message.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/highlight)
      */
     highlight(
@@ -838,7 +838,7 @@ export declare interface tabs {
      * 🅘 Firefox resolves URLs in injected CSS files relative to the CSS file itself, rather than to the page it's injected into.
      * 
      * The inserted CSS may be removed again by calling [`tabs.removeCSS()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS).
-     * @returns A Promise that will be fulfilled with no arguments when all the CSS has been inserted. If any error occurs, the promise will be rejected with an error message.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the CSS has been inserted. If any error occurs, the promise will be rejected with an error message.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS)
      */
     insertCSS(
@@ -891,7 +891,7 @@ export declare interface tabs {
      * Moves one or more tabs to a new position in the same window or to a different window.
      * 
      * You can only move tabs to and from windows whose [`WindowType`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/WindowType) is `"normal"`.
-     * @returns A Promise that will be fulfilled with a [`tabs.Tab`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) object or an `array` of [`tabs.Tab`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) objects, containing details about the moved tabs. If no tabs were moved (for example, because you tried to move an unpinned tab before a pinned tab) this will be an empty array. If any error occurs, the promise will be rejected with an error message.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a [`tabs.Tab`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) object or an `array` of [`tabs.Tab`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) objects, containing details about the moved tabs. If no tabs were moved (for example, because you tried to move an unpinned tab before a pinned tab) this will be an empty array. If any error occurs, the promise will be rejected with an error message.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/move)
      */
     move(
@@ -968,13 +968,13 @@ export declare interface tabs {
      * Opens print preview for the active tab.
      * 
      * An extension can detect when print preview has been closed by listening to the [afterprint](https://developer.mozilla.org/en-US/docs/Web/API/Window/afterprint_event) event
-     * @returns A Promise that will be fulfilled with no arguments when the preview page has opened.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the preview page has opened.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/printPreview)
      */
     printPreview(): Promise<void>,
     /**
      * Gets all tabs that have the specified properties, or all tabs if no properties are specified.
-     * @returns A Promise that will be fulfilled with an `array` of [`tabs.Tab`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) objects, containing information about each matching tab. If any error occurs, the promise will be rejected with an error message.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of [`tabs.Tab`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) objects, containing information about each matching tab. If any error occurs, the promise will be rejected with an error message.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)
      */
     query(
@@ -1060,7 +1060,7 @@ export declare interface tabs {
     ): Promise<Tab[]>,
     /**
      * Reload a tab, optionally bypassing the local web cache.
-     * @returns A Promise that will be fulfilled with no arguments when the tab has been reloaded. If any error occurs, the promise will be rejected with an error message.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the tab has been reloaded. If any error occurs, the promise will be rejected with an error message.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/reload)
      */
     reload(
@@ -1079,7 +1079,7 @@ export declare interface tabs {
     ): Promise<void>,
     /**
      * Closes one or more tabs.
-     * @returns A Promise that will be fulfilled with no arguments when all the specified tabs have been removed or their `beforeunload` prompts have been handled. If any error occurs, the promise will be rejected with an error message.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the specified tabs have been removed or their `beforeunload` prompts have been handled. If any error occurs, the promise will be rejected with an error message.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/remove)
      */
     remove(
@@ -1092,7 +1092,7 @@ export declare interface tabs {
     ): Promise<void>,
     /**
      * Removes from a page CSS which was previously injected by a call to [`tabs.insertCSS()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS).
-     * @returns A Promise that will be fulfilled with no arguments when all the CSS has been removed. If any error occurs, the promise will be rejected with an error message.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the CSS has been removed. If any error occurs, the promise will be rejected with an error message.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS)
      */
     removeCSS(
@@ -1136,7 +1136,7 @@ export declare interface tabs {
     ): Promise<void>,
     /**
      * Saves the current page as a PDF file. This will open a dialog, supplied by the underlying operating system, asking the user where they want to save the PDF file.
-     * @returns A Promise that will be fulfilled with a status string when the dialog has closed. The string may be any of: "saved", "replaced", "canceled", "not_saved", "not_replaced"
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a status string when the dialog has closed. The string may be any of: "saved", "replaced", "canceled", "not_saved", "not_replaced"
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAdPDF)
      */
     saveAsPDF(
@@ -1149,7 +1149,7 @@ export declare interface tabs {
      * Sends a single message from the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) to any [content scripts](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) or extension pages/iframes that belong to the extension and are running in the specified tab.
      * 
      * The message will be received in the extension context by any listeners to the [`runtime.onMessage`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) event. Listeners may then optionally return something as a response back to the sender.
-     * @returns A Promise that will be fulfilled with the response object sent by the handler of the message in the content script, or with no arguments if the content script did not send a response. If an error occurs while connecting to the specified tab or any other error occurs, the promise will be rejected with an error message. If several frames respond to the message, the promise is resolved to one of answers.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with the response object sent by the handler of the message in the content script, or with no arguments if the content script did not send a response. If an error occurs while connecting to the specified tab or any other error occurs, the promise will be rejected with an error message. If several frames respond to the message, the promise is resolved to one of answers.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage)
      */
     sendMessage(
@@ -1175,7 +1175,7 @@ export declare interface tabs {
     /**
      * Sends a single request to the content script(s) in the specified tab, with an optional callback to run when a response is sent back. The [`extension.onRequest`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/extension/onRequest) event is fired in each content script running in the specified tab for the current extension.
      * @deprecated This method has been deprecated. Use [`tabs.sendMessage()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) instead.
-     * @returns A Promise that will be fulfilled with the JSON response object sent by the handler of the message in the content script, or with no arguments if the content script did not send a response. If an error occurs while connecting to the specified tab or any other error occurs, the promise will be rejected with an error message.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with the JSON response object sent by the handler of the message in the content script, or with no arguments if the content script did not send a response. If an error occurs while connecting to the specified tab or any other error occurs, the promise will be rejected with an error message.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendRequest)
      */
     sendRequest(
@@ -1187,7 +1187,7 @@ export declare interface tabs {
     ): Promise<Object>,
     /**
      * Zooms the specified tab.
-     * @returns A Promise that will be fulfilled with no arguments after the zoom factor has been changed. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments after the zoom factor has been changed. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
      * 
      */
     setZoom(
@@ -1204,7 +1204,7 @@ export declare interface tabs {
     ): Promise<void>,
     /**
      * Sets zoom settings for the specified tab. These settings are reset to the default settings upon navigating the tab.
-     * @returns A Promise that will be fulfilled with no arguments after the zoom settings have been changed. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.getZoom
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments after the zoom settings have been changed. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.getZoom
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/setZoomSettings)
      */
     setZoomSettings(
@@ -1222,7 +1222,7 @@ export declare interface tabs {
     /**
      * Shows one or more tabs that were previously hidden by a call to [`tabs.hide`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/hide).
      * @experimental
-     * @returns A Promise that will be fulfilled with no arguments. If any error occurs, the promise will be rejected with an error message.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments. If any error occurs, the promise will be rejected with an error message.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/show)
      */
     show(
@@ -1255,7 +1255,7 @@ export declare interface tabs {
      * 
      * browser.tabs.onUpdated.addListener(handleUpdated);
      * ```
-     * @returns A Promise that will be fulfilled with no arguments when the tab has been updated. If any error occurs (for example, because the page was not an article), the promise will be rejected with an error message.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the tab has been updated. If any error occurs (for example, because the page was not an article), the promise will be rejected with an error message.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)
      */
     toggleReaderMode(
@@ -1270,7 +1270,7 @@ export declare interface tabs {
      * Navigate the tab to a new URL, or modify other properties of the tab.
      * 
      * To use this function, pass the ID of the tab to update, and an `updateProperties` object containing the properties you want to update. Properties that are not specified in `updateProperties` are not modified.
-     * @returns A Promise that will be fulfilled with a [`tabs.Tab`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) object containing details about the updated tab. The [`tabs.Tab`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) object doesn't contain `url`, `title` and `favIconUrl` unless matching [host permissions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or the `"tabs"` permission has been requested. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a [`tabs.Tab`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) object containing details about the updated tab. The [`tabs.Tab`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) object doesn't contain `url`, `title` and `favIconUrl` unless matching [host permissions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or the `"tabs"` permission has been requested. If the tab could not be found or some other error occurs, the promise will be rejected with an error message.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update)
      */
     update(
@@ -1356,7 +1356,7 @@ export declare interface tabs {
      * Note this API does not work on discarded tabs and does not need to be called immediately prior to switching tabs. It is merely a performance improvement when the tab switch can be anticipated, such as when hovering over a button that when clicked would switch to the tab.
      * 
      * It is expected that this API would mostly be useful to tab management extensions.
-     * @returns A Promise that will be fulfilled with no arguments if the tab identified by `tabId` is successfully warmed up. If `tabId` does not identify an open tab, or if warming up fails for some other reason, then the promise will be rejected with an error message.
+     * @returns A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments if the tab identified by `tabId` is successfully warmed up. If `tabId` does not identify an open tab, or if warming up fails for some other reason, then the promise will be rejected with an error message.
      * @link [MDN Reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/warmup)
      */
     warmup(
