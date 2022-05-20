@@ -1,5 +1,5 @@
 # JSBrowser
-JSBrowser are TypeScript files for the [Browser Object Model](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API) (BOM) based on [Mozilla Web Docs](https://developers.mozilla.org).
+JSBrowser are TypeScript files for the [Browser Object Model](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API) (BOM) based on [Mozilla Web Docs](https://developer.mozilla.org).
 
 ### How to use ?
 Download one of the releases from GitHub that can be found [here](https://github.com/kaplego/jsbrowser/releases);
